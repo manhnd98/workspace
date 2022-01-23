@@ -1,0 +1,28 @@
+{
+  "root": "apps/audio-stream-e2e",
+  "sourceRoot": "apps/audio-stream-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/audio-stream-e2e/cypress.json",
+        "devServerTarget": "audio-stream:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "audio-stream:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/audio-stream-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["audio-stream"]
+}
