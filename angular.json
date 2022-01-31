@@ -4,6 +4,8 @@
     "api": "apps/api",
     "api-interfaces": "libs/api-interfaces",
     "audio-stream": "apps/audio-stream",
-    "audio-stream-e2e": "apps/audio-stream-e2e"
+    "audio-stream-e2e": "apps/audio-stream-e2e",
+    "focus": "apps/focus",
+    "focus-e2e": "apps/focus-e2e"
   }
 }

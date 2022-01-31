@@ -1,0 +1,7 @@
+{
+  "name": "focus",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
