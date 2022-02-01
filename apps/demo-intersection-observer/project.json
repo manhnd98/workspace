@@ -1,34 +1,27 @@
 {
   "projectType": "application",
-  "root": "apps/audio-stream",
-  "sourceRoot": "apps/audio-stream/src",
+  "root": "apps/demo-intersection-observer",
+  "sourceRoot": "apps/demo-intersection-observer/src",
   "prefix": "workspace",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/audio-stream",
-        "index": "apps/audio-stream/src/index.html",
-        "main": "apps/audio-stream/src/main.ts",
-        "polyfills": "apps/audio-stream/src/polyfills.ts",
-        "tsConfig": "apps/audio-stream/tsconfig.app.json",
+        "outputPath": "dist/apps/demo-intersection-observer",
+        "index": "apps/demo-intersection-observer/src/index.html",
+        "main": "apps/demo-intersection-observer/src/main.ts",
+        "polyfills": "apps/demo-intersection-observer/src/polyfills.ts",
+        "tsConfig": "apps/demo-intersection-observer/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
-          "apps/audio-stream/src/favicon.ico",
-          "apps/audio-stream/src/assets",
-          {
-            "glob": "**/*",
-            "input": "node_modules/@taiga-ui/icons/src",
-            "output": "assets/taiga-ui/icons"
-          }
+          "apps/demo-intersection-observer/src/favicon.ico",
+          "apps/demo-intersection-observer/src/assets"
         ],
         "styles": [
+          "apps/demo-intersection-observer/src/styles.scss",
           "node_modules/@taiga-ui/core/styles/taiga-ui-global.less",
-          "node_modules/@taiga-ui/core/styles/taiga-ui-theme.less",
-          "apps/audio-stream/src/styles.scss"
+          "node_modules/@taiga-ui/core/styles/taiga-ui-theme.less"
         ],
         "scripts": []
       },
@@ -48,8 +41,8 @@
           ],
           "fileReplacements": [
             {
-              "replace": "apps/audio-stream/src/environments/environment.ts",
-              "with": "apps/audio-stream/src/environments/environment.prod.ts"
+              "replace": "apps/demo-intersection-observer/src/environments/environment.ts",
+              "with": "apps/demo-intersection-observer/src/environments/environment.prod.ts"
             }
           ],
           "outputHashing": "all"
@@ -69,39 +62,37 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "audio-stream:build:production"
+          "browserTarget": "demo-intersection-observer:build:production"
         },
         "development": {
-          "browserTarget": "audio-stream:build:development"
+          "browserTarget": "demo-intersection-observer:build:development"
         }
       },
       "defaultConfiguration": "development",
       "options": {
-        "proxyConfig": "apps/audio-stream/proxy.conf.json"
+        "port": 8398
       }
     },
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "audio-stream:build"
+        "browserTarget": "demo-intersection-observer:build"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
         "lintFilePatterns": [
-          "apps/audio-stream/src/**/*.ts",
-          "apps/audio-stream/src/**/*.html"
+          "apps/demo-intersection-observer/src/**/*.ts",
+          "apps/demo-intersection-observer/src/**/*.html"
         ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": [
-        "coverage/apps/audio-stream"
-      ],
+      "outputs": ["coverage/apps/demo-intersection-observer"],
       "options": {
-        "jestConfig": "apps/audio-stream/jest.config.js",
+        "jestConfig": "apps/demo-intersection-observer/jest.config.js",
         "passWithNoTests": true
       }
     }

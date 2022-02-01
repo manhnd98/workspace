@@ -2,11 +2,13 @@
   "projectType": "library",
   "root": "libs/web/intersection-observer",
   "sourceRoot": "libs/web/intersection-observer/src",
-  "prefix": "workspace",
+  "prefix": "ng",
   "targets": {
     "build": {
       "executor": "@nrwl/angular:package",
-      "outputs": ["dist/libs/web/intersection-observer"],
+      "outputs": [
+        "dist/libs/web/intersection-observer"
+      ],
       "options": {
         "project": "libs/web/intersection-observer/ng-package.json"
       },
@@ -22,7 +24,9 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/web/intersection-observer"],
+      "outputs": [
+        "coverage/libs/web/intersection-observer"
+      ],
       "options": {
         "jestConfig": "libs/web/intersection-observer/jest.config.js",
         "passWithNoTests": true

@@ -6,7 +6,9 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/focus",
         "index": "apps/focus/src/index.html",
@@ -92,7 +94,9 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/focus"],
+      "outputs": [
+        "coverage/apps/focus"
+      ],
       "options": {
         "jestConfig": "apps/focus/jest.config.js",
         "passWithNoTests": true

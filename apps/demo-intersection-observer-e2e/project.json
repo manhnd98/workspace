@@ -1,17 +1,17 @@
 {
-  "root": "apps/audio-stream-e2e",
-  "sourceRoot": "apps/audio-stream-e2e/src",
+  "root": "apps/demo-intersection-observer-e2e",
+  "sourceRoot": "apps/demo-intersection-observer-e2e/src",
   "projectType": "application",
   "targets": {
     "e2e": {
       "executor": "@nrwl/cypress:cypress",
       "options": {
-        "cypressConfig": "apps/audio-stream-e2e/cypress.json",
-        "devServerTarget": "audio-stream:serve:development"
+        "cypressConfig": "apps/demo-intersection-observer-e2e/cypress.json",
+        "devServerTarget": "demo-intersection-observer:serve:development"
       },
       "configurations": {
         "production": {
-          "devServerTarget": "audio-stream:serve:production"
+          "devServerTarget": "demo-intersection-observer:serve:production"
         }
       }
     },
@@ -22,13 +22,13 @@
       ],
       "options": {
         "lintFilePatterns": [
-          "apps/audio-stream-e2e/**/*.{js,ts}"
+          "apps/demo-intersection-observer-e2e/**/*.{js,ts}"
         ]
       }
     }
   },
   "tags": [],
   "implicitDependencies": [
-    "audio-stream"
+    "demo-intersection-observer"
   ]
 }
