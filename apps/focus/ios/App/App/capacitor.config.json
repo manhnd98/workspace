@@ -1,0 +1,6 @@
+{
+	"appId": "com.focus",
+	"appName": "focus",
+	"webDir": "../../dist/apps/focus",
+	"bundledWebRuntime": false
+}

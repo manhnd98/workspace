@@ -98,6 +98,40 @@
         "passWithNoTests": true
       }
     },
+    "run-ios": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "npx ionic capacitor run ios --project='focus' --livereload --external",
+        "platform": "",
+        "cwd": "apps/focus"
+      },
+      "configurations": {
+        "platform": "android",
+        "ios": {
+          "platform": "ios"
+        },
+        "android": {
+          "platform": "android"
+        }
+      }
+    },
+    "run-android": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "npx ionic capacitor run android --project='focus' --livereload --external",
+        "platform": "",
+        "cwd": "apps/focus"
+      },
+      "configurations": {
+        "platform": "android",
+        "ios": {
+          "platform": "ios"
+        },
+        "android": {
+          "platform": "android"
+        }
+      }
+    },
     "cap": {
       "executor": "@nxtend/capacitor:cap",
       "options": {

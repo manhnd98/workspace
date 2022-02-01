@@ -1,0 +1,42 @@
+{
+  "projectType": "library",
+  "root": "libs/web/intersection-observer",
+  "sourceRoot": "libs/web/intersection-observer/src",
+  "prefix": "workspace",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "outputs": ["dist/libs/web/intersection-observer"],
+      "options": {
+        "project": "libs/web/intersection-observer/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/web/intersection-observer/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/web/intersection-observer/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/web/intersection-observer"],
+      "options": {
+        "jestConfig": "libs/web/intersection-observer/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/web/intersection-observer/src/**/*.ts",
+          "libs/web/intersection-observer/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

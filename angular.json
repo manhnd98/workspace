@@ -6,6 +6,7 @@
     "audio-stream": "apps/audio-stream",
     "audio-stream-e2e": "apps/audio-stream-e2e",
     "focus": "apps/focus",
-    "focus-e2e": "apps/focus-e2e"
+    "focus-e2e": "apps/focus-e2e",
+    "web-intersection-observer": "libs/web/intersection-observer"
   }
 }

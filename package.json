@@ -7,7 +7,10 @@
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "serve:focus": "nx serve focus",
+    "serve:focus:android": "nx run focus:run-android",
+    "serve:focus:ios": "nx run focus:run-ios"
   },
   "private": true,
   "dependencies": {
@@ -65,6 +68,11 @@
     "eslint-plugin-cypress": "^2.10.3",
     "jest": "27.2.3",
     "jest-preset-angular": "11.0.0",
+    "ng-packagr": "^13.0.0",
+    "postcss": "^8.4.5",
+    "postcss-import": "^14.0.2",
+    "postcss-preset-env": "^6.7.0",
+    "postcss-url": "^10.1.1",
     "prettier": "^2.3.1",
     "ts-jest": "27.0.5",
     "typescript": "~4.4.3"
