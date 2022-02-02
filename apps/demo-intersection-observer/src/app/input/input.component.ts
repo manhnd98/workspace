@@ -9,7 +9,7 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 export class InputComponent {
   phoneModel = '+78005553535';
   constructor() {
-    const fibonacci = this.getFibonacci(5);
+    const fibonacci = this.getFibonacci(35);
   }
 
   private getFibonacci(number: number): number {
